@@ -5,8 +5,9 @@ from bs4 import BeautifulSoup
 
 
 def hespress_parser():
+    headers = {'User-agent': 'Mozilla/5.0'}
     url = 'http://hespress.com'
-    rslt = requests.get(url).text
+    rslt = requests.get(url,headers=headers).text
     html_text = rslt.encode('utf-8')
 
     #html_text=""

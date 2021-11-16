@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    WARNING! Make sure that you match all Quasar related
+    tags to the same version! (Below it's "@2.0.4")
+  -->
+
+  <head>
+    <link rel="stylesheet" href="/static/css/googlefonts.css">
+    <link href="/static/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/quasar.prod.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+    <!-- example of injection point where you write your app template -->
+
+    <div id="q-app" > <!--  class="q-pa-md q-gutter-sm " -->  
+
+
+  	 <q-layout view="lHr LpR fFf"  class="shadow-2 rounded-borders">
+       
+     <q-header elevated>
+
+      </q-header>
+
+      <q-page-container >
+        
+            <q-page class="full-width text-center">
+                    <div class="q-pa-md">
+                        <q-list bordered separator>
+                            % for d in data :
+                            <q-item class="q-py-lg"  clickable v-ripple>
+                                <q-item-section class="text-h4">
+                                <!-- <q-item-label overline  >{{ d['title'] }}</q-item-label> -->
+                                <a href="{{d['href']}}" style=" text-decoration: none;"> <q-item-label>{{ d['title'] }}</q-item-label> </a>
+                                </q-item-section>
+                            </q-item>
+                            % end
+                        </q-list>
+                    </div>
+     
+            </q-page> 
+   
+      </q-page-container>
+    
+    </q-layout>
+ </div>
+
+
+    <!-- Add the following at the end of your body tag -->
+    <script src="/static/js/jquery-2.2.4.min.js"></script>
+    <script src="/static/js/vue.global.prod.js"></script>
+    <script src="/static/js/quasar.umd.prod.js"></script>
+    <script src="/static/js/axios.min.js"></script>
+    <script src="/static/js/main.js"></script>
+
+  </body>
+</html>

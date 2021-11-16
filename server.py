@@ -49,5 +49,5 @@ if __name__ == "__main__":
     job=sched.add_job(job,trigger='interval',hours=1,id="1111")
 
     #run(host='0.0.0.0', port=8080, debug=True)
-    run(server='gunicorn',host='0.0.0.0', port=8080, debug=True, workers=4)
+    run(server='gunicorn',host='0.0.0.0', port=18080, debug=True, workers=4)
 
